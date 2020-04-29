@@ -1,5 +1,5 @@
 # going to try to make a classifier that can predict the make of your car. HERE WE GOOOOOOOOO
-# due to limitations of the data, this is only valid for cars from 1990 - 2017
+# due to limitations of the data, this is only valid for cars from 1990 to 2017 
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
@@ -83,7 +83,7 @@ y_predict = classifier.predict(x_test)
 print(confusion_matrix(y_test, y_predict))
 print(classification_report(y_test, y_predict))
 
-# let's try to find the optimal k value. Let's test from 1 to 20
+# let's try to find the optimal k value. test from 1 to 20
 # source code from https://stackabuse.com/k-nearest-neighbors-algorithm-in-python-and-scikit-learn/
 error = []
 for i in range(1, 40):
@@ -93,7 +93,7 @@ for i in range(1, 40):
     error.append(np.mean(predict_i != y_test))
 
 plt.figure(figsize=(12, 6))
-plt.plot(range(1, 40), error, color='red', linestyle='dashed', marker='o',
+plt.plot(range(1, 40), error, color='green', linestyle='dashed', marker='o',
          markerfacecolor='blue', markersize=10)
 plt.title('Error Rate K Value')
 plt.xlabel('K Value')
