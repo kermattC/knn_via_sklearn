@@ -16,9 +16,9 @@ x = data_set[['Year', 'Engine Fuel Type', 'Engine HP', 'Engine Cylinders', 'Tran
 # numerize fuel types
 x = x.replace(['regular unleaded', 'premium unleaded (required)', 'premium unleaded (recommended)', 'flex-fuel (premium unleaded recommended/E85)', 'flex-fuel (unleaded/E85)', 'flex-fuel (premium unleaded required/E85)', 'flex-fuel (unleaded/natural gas)', 'natural gas', 'diesel', 'electric'], [0,1,1,2,2,2,2,2,3,4])
 # numerize transmission type
-# x = x.replace(['MANUAL', 'AUTOMATIC', 'UNKNOWN', 'AUTOMATED_MANUAL', 'DIRECT_DRIVE'], [0, 1, 1, 2,3])
+x = x.replace(['MANUAL', 'AUTOMATIC', 'UNKNOWN', 'AUTOMATED_MANUAL', 'DIRECT_DRIVE'], [0, 1, 1, 2,3])
 # numerize driven wheels
-# x = x.replace(['rear wheel drive', 'front wheel drive', 'four wheel drive', 'all wheel drive'],[0,1,2,3])
+x = x.replace(['rear wheel drive', 'front wheel drive', 'four wheel drive', 'all wheel drive'],[0,1,2,3])
 
 # our goal
 y = data_set['Make'].values
